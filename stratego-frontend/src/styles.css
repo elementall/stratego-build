@@ -1,0 +1,70 @@
+
+/* Stock */
+
+.stock-cell {
+  background: beige;
+}
+.stock-cell-title {
+  font-weight: bold;
+}
+.stock-cell-col {
+  padding:0;
+  margin:0;
+}
+.stock-cell-image {
+
+  padding: 0;
+  margin: 1px;
+}
+.stock-cell-image-clicked {
+  opacity: 0.5;
+  padding: 0;
+  margin: 1px;
+}
+
+
+/* Game Board */
+
+.board {
+  margin-top: 4rem;
+  border: 10px solid black;
+  background: yellowgreen;
+  width: 630px;
+}
+
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  width: 610px;
+  height: 610px;
+}
+
+.tile {
+  flex: 1 0 4rem;
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid black;
+}
+
+.grass {
+  background: url("assets/img/game/standaard/grass.jpg") no-repeat center;
+  width: 61px;
+  height: 61px;
+}
+
+.waterTL {
+  background: url("assets/img/game/standaard/lakeTL.jpg") no-repeat center;
+
+}
+
+.waterTR {
+  background: url("assets/img/game/standaard/lakeTR.jpg") no-repeat center;
+}
+
+.waterBL {
+  background: url("assets/img/game/standaard/lakeBL.jpg") no-repeat center;
+}
+
+.waterBR {
+  background: url("assets/img/game/standaard/lakeBR.jpg") no-repeat center;
+}
