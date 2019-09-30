@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e72b7d33-1614-4759-9aa6-4316b52e7b4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/stratego-frontend/src/assets/img/header/stratego-header-multiplayer-transparent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stratego-frontend/src/app/components/common/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/stratego-frontend/src/app/components/common/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stratego-frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/stratego-frontend/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stratego-frontend/src/assets/img/header/stratego-header-multiplayer-transparent.png" beforeDir="false" afterPath="$PROJECT_DIR$/stratego-frontend/src/assets/img/header/stratego-header-multiplayer-transparent.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +33,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -71,6 +71,7 @@
       <workItem from="1569604517158" duration="1414000" />
       <workItem from="1569757910399" duration="556000" />
       <workItem from="1569758532518" duration="3627000" />
+      <workItem from="1569764425840" duration="211000" />
     </task>
     <task id="LOCAL-00001" summary="Bootstrap 4 toegevoegd....">
       <created>1569760129443</created>

@@ -1,41 +1,27 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-3" style="background: #333333">
-      <app-stock></app-stock>
-    </div>
-    <div class="col-6" style="background: darkolivegreen">
-      <div class="row justify-content-center">
-        <div class="board">
-          <div
-            id="tilesList"
-            class="tiles"
-          >
 
-            <div
-              *ngFor="let tile of tiles let i = index" [class]="tile.walkable"
-              [ngClass]="{
-        'waterTL': (tile.xCoordinate == 4 && tile.yCoordinate == 2) || (tile.xCoordinate == 4 && tile.yCoordinate == 6),
-        'waterTR': (tile.xCoordinate == 4 && tile.yCoordinate == 3) || (tile.xCoordinate == 4 && tile.yCoordinate == 7),
+  <div class="board">
+    <div
+      id="tilesList"
+      class="tiles"
+    >
+
+      <div
+        *ngFor="let tile of tiles let i = index" [class]="tile.walkable"
+        [ngClass]="{
+        'waterTR': (tile.xCoordinate == 4 && tile.yCoordinate == 2) || (tile.xCoordinate == 4 && tile.yCoordinate == 6),
+        'waterTL': (tile.xCoordinate == 4 && tile.yCoordinate == 3) || (tile.xCoordinate == 4 && tile.yCoordinate == 7),
         'waterBL': (tile.xCoordinate == 5 && tile.yCoordinate == 2) || (tile.xCoordinate == 5 && tile.yCoordinate == 6),
         'waterBR': (tile.xCoordinate == 5 && tile.yCoordinate == 3) || (tile.xCoordinate == 5 && tile.yCoordinate == 7),
         'grass':   (tile.xCoordinate != 4 && tile.yCoordinate != 2) || (tile.xCoordinate != 4 && tile.yCoordinate != 6) || (tile.xCoordinate != 4 && tile.yCoordinate != 3) || (tile.xCoordinate != 4 && tile.yCoordinate != 7) || (tile.xCoordinate != 5 && tile.yCoordinate != 2) || (tile.xCoordinate != 5 && tile.yCoordinate != 6) || (tile.xCoordinate != 5 && tile.yCoordinate != 3) || (tile.xCoordinate != 5 && tile.yCoordinate != 7)
         }"
-              (click)="selectedTile(tile.xCoordinate, tile.yCoordinate)"
-              id="{{i}}">
-              <div *ngIf="tile.piece">
-                <img src="{{tile.piece.img}}" alt="">
-              </div>
-
-
-            </div>
-          </div>
+        (click)="selectedTile(tile.xCoordinate, tile.yCoordinate)"
+        id="{{i}}">
+        <div *ngIf="tile.piece">
+          <img src="{{tile.piece.img}}" alt="">
         </div>
+
+
       </div>
     </div>
-    <div class="col-3" style="background: #333333">
-      <p> App stock placeholder</p>
-    </div>
-
   </div>
-</div>
 

@@ -1,0 +1,66 @@
+<div class="card card-signup center">
+  <div class="card-header">Sign Up</div>
+
+    <div class="row no-gutters">
+      <div class="col-md-6">
+        <div class="card-body">
+
+          <div class="form-group">
+            <label
+              for="username">
+              Username:
+            </label>
+            <input
+              [(ngModel)]="newuser.userName"
+              type="text"
+              class="form-control"
+              id="username"
+              >
+          </div>
+          <div class="form-group">
+            <label
+
+              for="pwd">
+              Password:</label>
+            <input
+              [(ngModel)]="newuser.passWord"
+              type="password"
+              class="form-control"
+              id="pwd">
+          </div>
+<!--          <div class="form-group">-->
+<!--            <label for="pwd-repeat">Repeat Password:</label>-->
+<!--            <input type="password" class="form-control" id="pwd-repeat">-->
+<!--          </div>-->
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-body">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input [(ngModel)]="newuser.email"type="email" class="form-control" id="email">
+          </div>
+          <div class="form-group">
+            <label for="location">location</label>
+            <input [(ngModel)]="newuser.location"type="text" class="form-control" id="location">
+          </div>
+          <div class="form-group">
+            <label for="avatar">Avatar</label>
+            <input [(ngModel)]="newuser.avatar"type="text" class="form-control" id="avatar">
+            <a href="https://nl.gravatar.com" target="_blank">We use gravatar for Avatars</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="btn btn-primary"
+      style="margin-bottom: 0;"
+      (click)="addUser(newuser)"
+    >Sign Up</button>
+
+</div>
+
+
+
+
+

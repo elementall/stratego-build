@@ -45,16 +45,6 @@
       <p>{{piece.name}}</p>
     </div>
     <div
-      *ngFor="let piece of filterColonel;"
-      class="col-2 stock-cell-col">
-      <img
-        src="{{piece.img}}"
-        alt="..."
-        class="stock-cell-image"
-        (click)="selectPiece(piece)">
-      <p>{{piece.name}}</p>
-    </div>
-    <div
       *ngFor="let piece of filterMajor;"
       class="col-2 stock-cell-col"
     >

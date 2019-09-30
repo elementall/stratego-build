@@ -15,8 +15,9 @@ export class Piece {
 
   }
 
-  public imageSourcePath(): string {
-    return `./assets/img/${this.name.toString().toLowerCase()}.png`;
+  public static getImage(side, name: string ): string {
+    return './assets/img/game/standaard/'+ side + name + '.jpg';
+
   }
 
 

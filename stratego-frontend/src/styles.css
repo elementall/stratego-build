@@ -1,14 +1,51 @@
-/* header */
-.header-jumbotron {
-  max-height: 20vh;
+/* reset */
+html {
+  height: 100%;
 }
-.header-jumbotron img {
-  max-height: 15vh;
+/* Utils */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+/* header */
+.header {
+  max-height: 25vh;
+
+}
+
+app-header img {
+  max-height: inherit;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+/* welcome */
 
+.welcome-title {
+  font-size: 3rem;
+}
+.welcome-sub-title {
+  font-size: 1.2rem;
+}
+.btn-welcome {
+  margin:0rem 2rem;
+}
+
+
+.card-login {
+  max-width: 18rem;
+
+}
+
+/* Signup */
+
+.card-signup {
+  max-width: 40rem;
+
+}
 
 
 
