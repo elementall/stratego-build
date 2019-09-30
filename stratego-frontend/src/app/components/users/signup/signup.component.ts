@@ -20,7 +20,7 @@ export class SignupComponent implements OnInit {
     console.log(this.dataService.players);
     // Todo: Checken of de gebruiker al bestaat.
     this.dataService.players.push(
-      new Player(newuser.userName, newuser.passWord, newuser.location, newuser.email, newuser.avatar)
+      new Player(newuser.userName, newuser.password, newuser.location, newuser.email, newuser.avatar)
     );
     console.log(this.dataService.players);
 

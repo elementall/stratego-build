@@ -8,15 +8,20 @@ import {DataService} from '../../../services/data.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  loginplayer: Player;
 
-
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
   }
 
-  doLogin(user: Player) {
-    // Todo: Login into Spring Boot / Java Backend.
+  doLogin(user: Player):boolean {
+    const foundUser = this.dataService.players.find(x => x.userName === user.userName);
+
+
+
+    // Todo: Nu: User wat aangemaakt is verifieren met de user in de DataService.
+    // Todo: Later: Login into Spring Boot / Java Backend.
 
   }
 }
