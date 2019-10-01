@@ -16,7 +16,7 @@ export class Piece {
   }
 
   public static getImage(side, name: string ): string {
-    return './assets/img/game/standaard/'+ side + name + '.jpg';
+    return './assets/img/game/standaard/' + side + name + '.jpg';
 
   }
 
