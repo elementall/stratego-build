@@ -1,11 +1,56 @@
+<div class="container-fluid">
+  <div class="row ">
+    <div class="col-6">
+      <h4>Game Overview</h4>
+      <div class="row gamebutton">
+        <div class="col-2">
+          <button class="btn btn-primary">Join</button>
+        </div>
+        <div class="col">
+          <button class="btn btn-primary">Create</button>
+        </div>
+      </div>
+      <div class="row gameoverview">
+        <div class="col">
+          <table class="table">
+            <thead>
+            <tr>
+              <th scope="col">GameID</th>
+              <th scope="col">GameTitle</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <tr *ngFor="let game of games; let i = index">
+              <td> <a href="#" (click)="onSelected(game,i)">{{ game.id }}</a></td>
+              <td> <a href="#" (click)="onSelected(game,i)">{{ game.title }}</a></td>
+            </tr>
+            </tbody>
+          </table>
 
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <h4>FriendsList</h4>
+      <h5>Hey {{dataService.loggedInUser.userName}},
+        Any friends online?</h5>
+      <div class="row friendsoverview">
+        <div class="col">
+          <table class="table">
+            <thead>
+            <tr>
+              <th scope="col">Avatar</th>
+              <th scope="col">Name</th>
+              <th scope="col">Location</th>
+              <th scope="col">Wins/Losses</th>
+            </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>Lobby works!!</p>
-<p>Username: {{dataService.loggedInUser.userName}}</p>
-<p>password: {{dataService.loggedInUser.password}}</p>
-<p>location: {{dataService.loggedInUser.location}}</p>
-<p>email: {{dataService.loggedInUser.email}}</p>
-<p>avatar: {{dataService.loggedInUser.avatar}}</p>
-
-<h1>Dave doe je ding.....</h1>
 <button class="btn btn-primary" routerLink="/game">To the GAME!!!!!</button>

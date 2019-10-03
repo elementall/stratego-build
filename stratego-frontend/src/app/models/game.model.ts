@@ -1,5 +1,12 @@
 export class Game {
-  public id: number;
-  public name: string;
+  static lastID = 1;
+  private id: number;
+  public title: string;
 
+
+  constructor(name: string) {
+    this.id = Game.lastID;
+    this.title = name;
+    Game.lastID++;
+  }
 }

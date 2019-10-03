@@ -47,8 +47,26 @@ app-header img {
 
 }
 
+/* Lobby */
 
+/* .table {
+  margin-top: 1rem;
+} */
 
+.gamebutton {
+  height: 4rem;
+}
+
+.gamebutton button {
+  width: 5rem;
+}
+
+.friendsoverview {
+  margin-top: 2.5rem;
+}
+
+.gameoverview {
+}
 
 
 /* Stock */
