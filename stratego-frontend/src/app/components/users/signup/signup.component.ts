@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  newuser = new Player('username', 'password', 'Location', 'user@domain.nl', 'user@domain.nl');
+  newuser = new Player('username', 'password');
 
   constructor(private dataService: DataService, private router: Router) {
   }
@@ -21,7 +21,7 @@ export class SignupComponent implements OnInit {
     console.log(this.dataService.players);
     // Todo: Checken of de gebruiker al bestaat.
     this.dataService.players.push(
-      new Player(newuser.userName, newuser.password, newuser.location, newuser.email, newuser.avatar)
+      new Player(newuser.username, newuser.password)
     );
     console.log(this.dataService.players);
     this.router.navigate(['/users/login']);

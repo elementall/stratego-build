@@ -10,9 +10,12 @@ export class DataService {
 
   initTestPlayers() {
     this.players.push(
-      new Player('bas', 'brunink', 'Haarlem', 'bas.brunink@hva.nl', 'bas.brunink@hva.nl'),
-      new Player('dave', 'dekker', 'Lisse', 'dave.dekker3@hva.nl', 'dave.dekker3@hva.nl'),
+      new Player('bas', 'brunink'),
+      new Player('dave', 'dekker'),
+      new Player('john', 'somers'),
+      new Player('michel', 'mercera'),
     );
+    console.log(this.players);
   }
 
   dummyGameData() {

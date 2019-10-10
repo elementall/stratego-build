@@ -1,4 +1,6 @@
 export class Game {
+
+  // TODO: Class attributes
   static lastID = 1;
   private id: number;
   public title: string;
@@ -9,4 +11,6 @@ export class Game {
     this.title = name;
     Game.lastID++;
   }
+
+  // Todo: Getters and Setters
 }

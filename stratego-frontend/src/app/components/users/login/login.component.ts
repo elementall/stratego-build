@@ -11,7 +11,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  loginPlayer = new Player('', '', '', '', '');
+  loginPlayer = new Player('', '');
   retry = false;
   constructor(private dataService: DataService, private router: Router) {
   }
@@ -23,7 +23,9 @@ export class LoginComponent implements OnInit {
   // Todo: Later: Login into Spring Boot / Java Backend.
 
   doLogin(user: Player) {
-    const foundPlayer = this.dataService.players.find(x => x.userName === user.userName && x.password === user.password);
+    const foundPlayer = this.dataService.players.find(x => x.username === user.username && x.password === user.password);
+    console.log(user);
+    console.log(foundPlayer);
     if (foundPlayer) {
       this.dataService.loggedInUser = foundPlayer;
       this.router.navigate(['/lobby']);
