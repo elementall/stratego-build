@@ -3,18 +3,18 @@ import {Game} from './game.model';
 
 export class Player {
   static lastId = 1;
-  private id: number;
-  private location: string;
-  private email: string;
-  private avatar: string;
-  private rank: number;
-  private status: PlayerStatus;
-  private friends: Player[] = [];
-  private games: Game[] = [];
+  public id: number;
+  public location: string;
+  public email: string;
+  public avatar: string;
+  public rank: number;
+  public status: PlayerStatus;
+  public friends: Player[] = [];
+  public games: Game[] = [];
 
   constructor(
-    private username: string,
-    private password: string,
+    public username: string,
+    public password: string,
 
   ) {
     this.id = Player.lastId;

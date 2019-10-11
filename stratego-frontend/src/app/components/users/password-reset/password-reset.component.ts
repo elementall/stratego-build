@@ -19,9 +19,10 @@ export class PasswordResetComponent implements OnInit {
   }
 
   reset(user: Player) {
-    const foundPlayer = this.dataService.players.find(x => x.username === user.username && x.password === user.password);
+    const foundPlayer = this.dataService.players.find(x => x.getUsername() === user.getUsername()
+      && x.getPassword() === user.getPassword());
     if (foundPlayer) {
-      foundPlayer.password = this.newPassword;
+      foundPlayer.setPassword(this.newPassword);
       this.dataService.loggedInUser = foundPlayer;
       this.router.navigate(['/users/login']);
 
