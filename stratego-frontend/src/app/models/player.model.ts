@@ -7,12 +7,10 @@ export class Player {
   public location: string;
   public email: string;
   public avatar: string;
+  public rank: string;
   public status: PlayerStatus;
   public friends: Player[] = [];
   public games: Game[] = [];
-
-  // public games[]: Games
-
 
   constructor(
     public username: string,
