@@ -13,4 +13,7 @@ export class Game {
   }
 
   // Todo: Getters and Setters
+
+  getId() { return this.id; }
+
 }
