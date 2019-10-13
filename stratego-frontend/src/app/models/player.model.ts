@@ -30,9 +30,9 @@ export class Player {
   getEmail() { return this.email; }
   getAvatar() { return this.avatar; }
   getRank() { return this.rank; }
-  getStatus() {return this.status; }
+  getStatus() {return this.status; } // TODO: Werkt dit??
   getAllFriends() { return this.friends; }
-  getOneFriend(id: number) { return this.friends.find(x => x.id === id); } // werkt dit??????
+  getOneFriend(id: number) { return this.friends.find(x => x.id === id); } // TODO: werkt dit??????
   getAllGames() { return this.games; }
   getOneGame(id: number) { return this.games.find(x => x.getId() === id ); }
 

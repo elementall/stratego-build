@@ -1,5 +1,6 @@
 export enum GameState {
+  await = 'waiting for invite',
   setup = 'setup',
-  played = 'played',
-  closed = 'closed'
+  atplay = 'atplay',
+  finished = 'finished',
 }
