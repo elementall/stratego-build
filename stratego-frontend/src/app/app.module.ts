@@ -20,7 +20,7 @@ import {CreateGameComponent} from './components/lobby/create-game/create-game.co
 import {JoinGameComponent} from './components/lobby/join-game/join-game.component';
 import {GameComponent} from './components/game/game.component';
 
-import {NgxExtendedPdfViewerModule} from 'ngx-extended-pdf-viewer'; //unused for the moment
+import {NgxExtendedPdfViewerModule} from 'ngx-extended-pdf-viewer'; // unused for the moment
 
 import {DropdownDirective} from './shared/dropdown.directive'; // Unused for the moment
 
@@ -30,6 +30,7 @@ import {FormsModule} from '@angular/forms';
 import { PasswordResetComponent } from './components/users/password-reset/password-reset.component';
 import { ContinueGameComponent } from './components/lobby/continue-game/continue-game.component';
 import { CreditsComponent } from './components/common/credits/credits.component';
+import { StockBlueComponent } from './components/game/stock-blue/stock-blue.component';
 
 
 const appRoutes: Routes = [
@@ -64,7 +65,8 @@ const appRoutes: Routes = [
     GameComponent,
     PasswordResetComponent,
     ContinueGameComponent,
-    CreditsComponent
+    CreditsComponent,
+    StockBlueComponent
   ],
   imports: [
     BrowserModule,
