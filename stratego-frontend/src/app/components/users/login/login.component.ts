@@ -25,10 +25,12 @@ export class LoginComponent implements OnInit {
       && x.getPassword() === user.getPassword());
     console.log(user);
     console.log(foundPlayer);
+
     if (foundPlayer) {
       this.dataService.loggedInUser = foundPlayer;
       this.router
         .navigate(['/lobby']);
+      console.log(this.dataService.players);
     }
     if (!foundPlayer) {
       this.retry = true;

@@ -41,11 +41,27 @@
             <thead>
             <tr>
               <th scope="col">Avatar</th>
+              <th scope="col">Last Online</th>
               <th scope="col">Name</th>
               <th scope="col">Location</th>
-              <th scope="col">Wins/Losses</th>
+              <th scope="col">Rank</th>
             </tr>
             </thead>
+            <tbody>
+            <tr
+              [class.table-success]="friend.getStatus() === 'online'"
+              [class.table-danger]="friend.getStatus() === 'offline'"
+            *ngFor="let friend of friends;let i = index">
+              <td>{{friend.avatar}}</td>
+              <td>2019-10-10</td>
+              <td>{{friend.username}}</td>
+              <td>{{friend.location}}</td>
+              <td>{{friend.rank}}</td>
+
+
+            </tr>
+            </tbody>
+
           </table>
         </div>
       </div>
