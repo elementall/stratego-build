@@ -15,6 +15,7 @@ export class GameService {
   bluePieces: Piece[] = [];
   redPieces: Piece[] = [];
   emptyPiece = new Piece(0, '', 'none', 0, PieceName.Empty, PieceStatus.Levend, false, false);
+  selectedPiece = this.emptyPiece;
 
 
   constructor() { }

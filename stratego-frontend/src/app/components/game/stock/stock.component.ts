@@ -73,6 +73,7 @@ export class StockComponent implements OnInit {
     console.log('index of selected piece: ' + index);
     this.pieces.splice(index, 1);
     this.pieceClickStatus = !this.pieceClickStatus;
+    this.gameService.selectedPiece = piece;
 
     // TODO: Selectie leegmaken nadat de piece op de het board is geplaatst
 

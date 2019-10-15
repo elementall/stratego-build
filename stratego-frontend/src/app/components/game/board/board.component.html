@@ -14,7 +14,7 @@
         'waterBR': (tile.xCoordinate == 5 && tile.yCoordinate == 3) || (tile.xCoordinate == 5 && tile.yCoordinate == 7),
         'grass':   (tile.xCoordinate != 4 && tile.yCoordinate != 2) || (tile.xCoordinate != 4 && tile.yCoordinate != 6) || (tile.xCoordinate != 4 && tile.yCoordinate != 3) || (tile.xCoordinate != 4 && tile.yCoordinate != 7) || (tile.xCoordinate != 5 && tile.yCoordinate != 2) || (tile.xCoordinate != 5 && tile.yCoordinate != 6) || (tile.xCoordinate != 5 && tile.yCoordinate != 3) || (tile.xCoordinate != 5 && tile.yCoordinate != 7)
         }"
-        (click)="selectedTile(tile.xCoordinate, tile.yCoordinate)"
+        (click)="tileSelected(tile.xCoordinate, tile.yCoordinate)"
         id="{{i}}">
         <div *ngIf="tile.piece">
           <img src="{{tile.piece.img}}" alt="">
