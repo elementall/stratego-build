@@ -3,7 +3,6 @@ import {GameState} from './gameState.enum';
 
 export class Game {
 
-  // TODO: Class attributes
   static lastID = 1;
   private id: number;
   public name: string;
@@ -20,7 +19,7 @@ export class Game {
 
   // Getters
   getId() { return this.id; }
-  getName() {return this.name }
+  getName() {return this.name; }
   getRedPlayer() { return this.redPlayer; }
   getbluePlayer() { return this.bluePlayer; }
   getState() { return this.state; }
@@ -28,13 +27,12 @@ export class Game {
 
   // Setters
   setId(id: number) {  this.id = id ; }
-  setName(name: string) { this.name = name;}
+  setName(name: string) { this.name = name; }
   setRedPlayer(player: Player) {  this.redPlayer = player; }
   setbluePlayer(player: Player) {  this.bluePlayer = player; }
   setState(state: GameState) {  this.state = state; }
   setwinner(winner: Player) { this.winner = winner; }
 
 
-  // TODO: Methods
 
 }

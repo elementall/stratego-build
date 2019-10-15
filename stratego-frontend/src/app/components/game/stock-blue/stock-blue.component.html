@@ -1,0 +1,134 @@
+<div class="stock-cell container">
+  <div class="r">
+    <h3>Please place your battleforce!!!!</h3>
+  </div>
+  <div class="row">
+    <div
+      *ngFor="let piece of filterFlag;"
+      class="col-2 stock-cell-col">
+      <img
+        src="{{piece.img}}"
+        alt="..."
+        class="stock-cell-image"
+        (click)="selectPiece(piece)">
+      <p>{{piece.name}}</p>
+    </div>
+    <div
+      *ngFor="let piece of filterMarshal;"
+      class="col-2 stock-cell-col">
+      <img
+        src="{{piece.img}}"
+        alt="..."
+        class="stock-cell-image"
+        (click)="selectPiece(piece)">
+      <p>{{piece.name}}</p>
+    </div>
+    <div
+      *ngFor="let piece of filterGeneral;"
+      class="col-2 stock-cell-col"
+    >
+      <img
+        src="{{piece.img}}"
+        alt="..."
+        class="stock-cell-image"
+        (click)="selectPiece(piece)">
+      <p>{{piece.name}}</p>
+    </div>
+    <div
+      *ngFor="let piece of filterColonel;"
+      class="col-2 stock-cell-col">
+      <img
+        src="{{piece.img}}"
+        alt="..."
+        class="stock-cell-image"
+        (click)="selectPiece(piece)">
+      <p>{{piece.name}}</p>
+    </div>
+    <div
+      *ngFor="let piece of filterMajor;"
+      class="col-2 stock-cell-col"
+    >
+      <img
+        src="{{piece.img}}"
+        alt="..."
+        class="stock-cell-image"
+        (click)="selectPiece(piece)">
+      <p>{{piece.name}}</p>
+    </div>
+    <div
+      *ngFor="let piece of filterCaptain;"
+      class="col-2 stock-cell-col">
+      <img
+        src="{{piece.img}}"
+        alt="..."
+        class="stock-cell-image"
+        (click)="selectPiece(piece)">
+      <p>{{piece.name}}</p>
+    </div>
+    <div
+      *ngFor="let piece of filterLieutenant;"
+      class="col-2 stock-cell-col"
+    >
+      <img
+        src="{{piece.img}}"
+        alt="..."
+        class="stock-cell-image"
+        (click)="selectPiece(piece)">
+      <p>{{piece.name}}</p>
+    </div>
+    <div
+      *ngFor="let piece of filterSergeant;"
+      class="col-2 stock-cell-col">
+      <img
+        src="{{piece.img}}"
+        alt="..."
+        class="stock-cell-image"
+        (click)="selectPiece(piece)">
+      <p>{{piece.name}}</p>
+    </div>
+    <div
+      *ngFor="let piece of filterMiner;"
+      class="col-2 stock-cell-col"
+    >
+      <img
+        src="{{piece.img}}"
+        alt="..."
+        class="stock-cell-image"
+        (click)="selectPiece(piece)">
+      <p>{{piece.name}}</p>
+    </div>
+    <div
+      *ngFor="let piece of filterScout;"
+      class="col-2 stock-cell-col">
+      <img
+        src="{{piece.img}}"
+        alt="..."
+        class="stock-cell-image"
+        (click)="selectPiece(piece)">
+      <p>{{piece.name}}</p>
+    </div>
+    <div
+      *ngFor="let piece of filterSpy;"
+      class="col-2 stock-cell-col"
+    >
+      <img
+        src="{{piece.img}}"
+        alt="..."
+        class="stock-cell-image"
+        (click)="selectPiece(piece)">
+      <p>{{piece.name}}</p>
+    </div>
+    <div
+      *ngFor="let piece of filterBomb;"
+      class="col-2 stock-cell-col"
+    >
+      <img
+        src="{{piece.img}}"
+        alt="..."
+        class="stock-cell-image"
+        (click)="selectPiece(piece)">
+      <p>{{piece.name}}</p>
+    </div>
+  </div>
+
+</div>

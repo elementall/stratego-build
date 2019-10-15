@@ -29,6 +29,11 @@ export class BoardComponent implements OnInit {
 
   tileSelected(xCoordinate: number, yCoordinate: number) {
 
+    /* Todo: PlacePiece Opsplitsen in PlacePiece en Update Piece...
+    Place Piece checken of veld in het setup gebied zit,
+    UpdatePiece checken op kleur en rang en leeg veld
+     */
+
 
     let idx;
     // find tile in Tiles Array
