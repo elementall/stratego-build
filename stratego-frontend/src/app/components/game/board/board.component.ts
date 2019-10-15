@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {GameService} from '../../../services/game/game.service';
 import {Tile} from '../../../models/tile.model';
+import {GameState} from '../../../models/gameState.enum';
 
 @Component({
   selector: 'app-board',
@@ -10,33 +11,63 @@ import {Tile} from '../../../models/tile.model';
 export class BoardComponent implements OnInit {
   tiles = this.gameService.tiles;
   selectedTile: Tile;
+  firstSelectedTile: Tile;
+  secondSelectedTile: Tile;
+  firstTileSelected = false;
   // bluePieces = this.gameService.bluePieces;
   // redPieces = this.gameService.redPieces;
-  constructor(private gameService: GameService) { }
+  constructor(private gameService: GameService) {
+  }
 
   ngOnInit() {
     this.gameService.createBoard();
     this.gameService.createBluePieces();
     this.gameService.createRedPieces();
+    this.gameService.gameState = GameState.setup;
   }
 
 
-
   tileSelected(xCoordinate: number, yCoordinate: number) {
-    console.log('TileSelect Fired');
+
+
     let idx;
     // find tile in Tiles Array
-    this.selectedTile = this.tiles.find(x =>  x.xCoordinate === xCoordinate && x.yCoordinate === yCoordinate);
-
-
+    this.selectedTile = this.tiles.find(x => x.xCoordinate === xCoordinate && x.yCoordinate === yCoordinate);
     // find index of selected tile
     idx = this.tiles.indexOf(this.selectedTile);
-
-    console.log(this.tiles[idx]);
     // update tiles with new tile with piece
-    this.tiles[idx].piece = this.gameService.selectedPiece;
-    console.log(this.tiles[idx]);
+
+    if (this.gameService.gameState === GameState.setup && this.tiles[idx].walkable === true) {
+      console.log('TileSelect Fired in Setup Mode');
+      this.gameService.placePiece(this.gameService.selectedPiece, idx);
+    } else if (this.gameService.gameState === GameState.atplay) {
+      console.log('TileSelect Fired in Play Mode');
+      if (this.firstTileSelected === false) {
+        this.firstSelectedTile = this.selectedTile;
+      }
+      if (this.firstTileSelected === true) {
+        console.log(this.firstSelectedTile);
+        if (this.firstSelectedTile.piece.name === 'empty' && this.tiles[idx].piece.side === 'r') {
+          alert('Not Allowed');
+
+        } else {
+          this.gameService.placePiece(this.firstSelectedTile.piece, idx);
+          this.firstSelectedTile.piece = this.gameService.emptyPiece;
+        }
 
 
+      }
+
+      this.firstTileSelected = !this.firstTileSelected;
+    } else {
+      alert('Not Allowed');
+    }
+
+
+  }
+
+  setupDone() {
+    this.gameService.gameState = GameState.atplay;
+    console.log('Gamemode:  ' + this.gameService.gameState);
   }
 }

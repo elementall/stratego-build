@@ -3,6 +3,7 @@ import {Tile} from '../../models/tile.model';
 import {PieceStatus} from '../../models/piece-status.enum';
 import {PieceName} from '../../models/piece-name.enum';
 import {Piece} from '../../models/piece.model';
+import {GameState} from '../../models/gameState.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -14,11 +15,17 @@ export class GameService {
 
   bluePieces: Piece[] = [];
   redPieces: Piece[] = [];
-  emptyPiece = new Piece(0, '', 'none', 0, PieceName.Empty, PieceStatus.Levend, false, false);
+  emptyPiece = new Piece(0, '', 'none', -1, PieceName.Empty, PieceStatus.Levend, false, false);
   selectedPiece = this.emptyPiece;
+  gameState: GameState;
 
 
   constructor() { }
+  placePiece(piece: Piece, tileIdx: number) {
+    this.tiles[tileIdx].piece = piece;
+  }
+
+
 
   createBoard() {
     for (let x = 0; x < 10; x++) {
@@ -27,6 +34,7 @@ export class GameService {
       }
     }
   }
+
   private createTile(x: number, y: number) {
     if (this.nonWalkableTilesX.includes(x) && this.nonWalkableTilesY.includes(y)) {
       return new Tile(x, y, false, this.emptyPiece);

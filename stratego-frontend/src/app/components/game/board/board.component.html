@@ -1,4 +1,9 @@
-
+  <button
+    class="btn btn-primary"
+    (click)="setupDone()"
+  [disabled]="gameService.gameState === 'atplay'">
+    Done Setup
+  </button>
   <div class="board">
     <div
       id="tilesList"
