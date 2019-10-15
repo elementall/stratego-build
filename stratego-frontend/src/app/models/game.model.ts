@@ -4,7 +4,7 @@ import {GameState} from './gameState.enum';
 export class Game {
 
   static lastID = 1;
-  private id: number;
+  public id: number;
   public name: string;
   public redPlayer: Player;
   public bluePlayer: Player;

@@ -28,11 +28,7 @@ export class BoardComponent implements OnInit {
 
 
   tileSelected(xCoordinate: number, yCoordinate: number) {
-
-    /* Todo: PlacePiece Opsplitsen in PlacePiece en Update Piece...
-    Place Piece checken of veld in het setup gebied zit,
-    UpdatePiece checken op kleur en rang en leeg veld
-     */
+    console.log('TileSelect Fired in Setup Mode');
 
 
     let idx;
@@ -40,11 +36,18 @@ export class BoardComponent implements OnInit {
     this.selectedTile = this.tiles.find(x => x.xCoordinate === xCoordinate && x.yCoordinate === yCoordinate);
     // find index of selected tile
     idx = this.tiles.indexOf(this.selectedTile);
-    // update tiles with new tile with piece
 
-    if (this.gameService.gameState === GameState.setup && this.tiles[idx].walkable === true) {
-      console.log('TileSelect Fired in Setup Mode');
+
+    if (this.gameService.gameState === GameState.setup
+      && this.tiles[idx].walkable === true
+      && ((
+        xCoordinate < 4 && this.gameService.selectedPiece.side === 'r')
+        ||
+        (xCoordinate > 5 && this.gameService.selectedPiece.side === 'b'))
+    ) {
+
       this.gameService.placePiece(this.gameService.selectedPiece, idx);
+
     } else if (this.gameService.gameState === GameState.atplay) {
       console.log('TileSelect Fired in Play Mode');
       if (this.firstTileSelected === false) {
@@ -53,19 +56,17 @@ export class BoardComponent implements OnInit {
       if (this.firstTileSelected === true) {
         console.log(this.firstSelectedTile);
         if (this.firstSelectedTile.piece.name === 'empty' && this.tiles[idx].piece.side === 'r') {
-          alert('Not Allowed');
-
+          alert('Je kan geen leeg veld verplaatsen');
         } else {
+
           this.gameService.placePiece(this.firstSelectedTile.piece, idx);
+
           this.firstSelectedTile.piece = this.gameService.emptyPiece;
         }
-
-
       }
-
       this.firstTileSelected = !this.firstTileSelected;
     } else {
-      alert('Not Allowed');
+      alert('Plaats troepen in je eigen gebied');
     }
 
 

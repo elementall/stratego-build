@@ -23,7 +23,7 @@
             <tr>
             <tr *ngFor="let game of games; let i = index">
               <td> <a href="#" (click)="onSelected(game,i)">{{ game.id }}</a></td>
-              <td> <a href="#" (click)="onSelected(game,i)">{{ game.title }}</a></td>
+              <td> <a href="#" (click)="onSelected(game,i)">{{ game.name }}</a></td>
             </tr>
             </tbody>
           </table>
@@ -33,7 +33,7 @@
     </div>
     <div class="col-6">
       <h4>FriendsList</h4>
-      <h5>Hey {{dataService.loggedInUser.userName}},
+      <h5>Hey {{dataService.loggedInUser.username}},
         Any friends online?</h5>
       <div class="row friendsoverview">
         <div class="col">

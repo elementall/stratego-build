@@ -12,18 +12,29 @@ export class GameService {
   public tiles: Tile[] = [];
   private nonWalkableTilesX: number[] = [4, 5];
   private nonWalkableTilesY: number[] = [2, 3, 6, 7];
+  firstTileSelected = false;
+  firstSelectedTile: Tile;
+  secondSelectedTile: Tile;
 
   bluePieces: Piece[] = [];
   redPieces: Piece[] = [];
   emptyPiece = new Piece(0, '', 'none', -1, PieceName.Empty, PieceStatus.Levend, false, false);
   selectedPiece = this.emptyPiece;
+  selectedTile: Tile;
   gameState: GameState;
 
 
   constructor() { }
   placePiece(piece: Piece, tileIdx: number) {
-    this.tiles[tileIdx].piece = piece;
+    if (this.tiles[tileIdx].walkable) {
+      this.tiles[tileIdx].piece = piece;
+      this.selectedPiece = this.emptyPiece;
+    } else {
+      alert('Je verdinkt en bent nu dus je stuk kwijt :D, jammer joh');
+    }
+
   }
+
 
 
 
