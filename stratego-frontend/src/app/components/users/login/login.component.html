@@ -1,37 +1,37 @@
+<div class="container scroll-container">
 
-<div class="card card-login center">
-  <div class="card-header">Login</div>
-  <div class="card-body">
+  <div class="login-form handwriting">
+    <h1>Login</h1>
+    <div class="form-group">
+      <label
+        for="username">Username:</label>
+      <input type="text" class="form-control" id="username"
+             [(ngModel)]="loginPlayer.username">
+    </div>
+    <div class="form-group">
 
-      <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" class="form-control" id="username"
-        [(ngModel)]="loginPlayer.username">
-      </div>
-      <div class="form-group">
-
-        <label for="pwd">Password: </label>
-        <input type="password" class="form-control" id="pwd"
-        [(ngModel)]="loginPlayer.password">
-        <small
-          id="passwordHelpInline"
-          class="text-muted "
+      <label for="pwd">Password: </label>
+      <input type="password" class="form-control" id="pwd"
+             [(ngModel)]="loginPlayer.password">
+      <small
+        id="passwordHelpInline"
+        class="text-muted "
         *ngIf="retry">
-          WRONG !!!!!!!!!
-          <a routerLink="/users/passwordReset">Reset password</a>
-        </small>
-        <ng-template>
+        WRONG !!!!!!!!!
+        <a routerLink="/users/passwordReset">Reset password</a>
+      </small>
+      <ng-template>
 
-        </ng-template>
+      </ng-template>
 
-      </div>
+    </div>
 
+
+    <button
+      class="btn btn-primary"
+      style="margin-bottom: 0;"
+      (click)="doLogin(loginPlayer)">login
+    </button>
   </div>
-  <button
-    class="btn btn-primary"
-    style="margin-bottom: 0;"
-  (click)="doLogin(loginPlayer)">login
-  </button>
 
 </div>
-
